@@ -1,12 +1,13 @@
 # Simple and portable CMake template for raylib
 
-This is a basic project template for raylib using CMake and has been tested with Visual Studio, Visual Studio Code and CLion.
+This is a basic project template for raylib using CMake (using https://github.com/SasLuca/raylib-cmake-template) and has been tested with Visual Studio, Visual Studio Code and CLion.
 
 The master branch of the raylib source code is downloaded using CMake FetchContent from github and compiled from source as it is much easier than including prebuilt binaries for every platform and configuration.
 
 Building from the cmake file will build both raylib and `src/main.cpp` which includes a basic example of a raylib program.
 
 We are also combinding code and cmake stuff from https://github.com/jrouwe/JoltPhysicsHelloWorld
+
 
 ## Asset handling
 
