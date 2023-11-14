@@ -1,5 +1,27 @@
 #include "raylib.h"
 
+// The Jolt headers don't include Jolt.h. Always include Jolt.h before including any other Jolt header.
+// You can use Jolt.h in your precompiled header to speed up compilation.
+#include <Jolt/Jolt.h>
+
+// Jolt includes
+#include <Jolt/RegisterTypes.h>
+#include <Jolt/Core/Factory.h>
+#include <Jolt/Core/TempAllocator.h>
+#include <Jolt/Core/JobSystemThreadPool.h>
+#include <Jolt/Physics/PhysicsSettings.h>
+#include <Jolt/Physics/PhysicsSystem.h>
+#include <Jolt/Physics/Collision/Shape/BoxShape.h>
+#include <Jolt/Physics/Collision/Shape/SphereShape.h>
+#include <Jolt/Physics/Body/BodyCreationSettings.h>
+#include <Jolt/Physics/Body/BodyActivationListener.h>
+
+// STL includes
+#include <iostream>
+#include <cstdarg>
+#include <thread>
+
+
 #define SCREEN_WIDTH (800)
 #define SCREEN_HEIGHT (450)
 
@@ -11,6 +33,9 @@ int main(void)
     SetTargetFPS(60);
 
     Texture2D texture = LoadTexture(ASSETS_PATH"test.png"); // Check README.md for how this works
+
+    // test Jolt here
+    JPH::Factory::sInstance = new JPH::Factory();
 
     while (!WindowShouldClose())
     {
