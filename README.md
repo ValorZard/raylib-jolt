@@ -1,6 +1,6 @@
 # Simple and portable CMake template for raylib
 
-This is a basic project template for raylib using CMake (using https://github.com/SasLuca/raylib-cmake-template) and has been tested with Visual Studio, Visual Studio Code and CLion.
+This is a basic project template for raylib using CMake (using https://github.com/SasLuca/raylib-cmake-template) and doesn't currently build at all.
 
 The master branch of the raylib source code is downloaded using CMake FetchContent from github and compiled from source as it is much easier than including prebuilt binaries for every platform and configuration.
 
@@ -8,13 +8,12 @@ Building from the cmake file will build both raylib and `src/main.cpp` which inc
 
 We are also combinding code and cmake stuff from https://github.com/jrouwe/JoltPhysicsHelloWorld
 
-
 ## Asset handling
 
 The example in `src/main.c` uses an example image located in the `assets` folder.
 To load it we use `ASSETS_PATH`, which is a string macro with the *absolute* path "assets" directory.
 This macro is defined in the `CMakeLists.txt` file on line `23`.
- 
+
 If you plan on releasing or sharing your game consider manually setting the value of the `ASSETS_PATH` macro.
 
 In C you can concatenate string literals by putting them next to each other, 
