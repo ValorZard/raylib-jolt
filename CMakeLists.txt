@@ -49,6 +49,7 @@ set(USE_TZCNT ON)
 set(USE_F16C ON)
 set(USE_FMADD ON)
 
+set(WINDOWS_STORE ON)
 # Include Jolt
 FetchContent_Declare(
         JoltPhysics
