@@ -35,6 +35,8 @@ int main(void)
     Texture2D texture = LoadTexture(ASSETS_PATH"test.png"); // Check README.md for how this works
 
     // test Jolt here
+    JPH::RegisterDefaultAllocator();
+
     JPH::Factory::sInstance = new JPH::Factory();
 
     while (!WindowShouldClose())
