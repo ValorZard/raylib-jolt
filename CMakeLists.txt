@@ -49,6 +49,9 @@ set(USE_TZCNT ON)
 set(USE_F16C ON)
 set(USE_FMADD ON)
 
+# dirty hack to fix the problem of Jolt not linking properly 
+# Raylib uses dynamic Runtime Library transitively from glfw, and Jolt uses static runtime library unless it's windows store application.
+# in the future, I hope to figure out a better solution
 set(WINDOWS_STORE ON)
 # Include Jolt
 FetchContent_Declare(
